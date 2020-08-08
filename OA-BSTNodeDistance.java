@@ -7,7 +7,7 @@ public class BinaryNode{
   public BinaryNode left;
   public BinaryNode right; 
 }
-//Build BST
+//Build BST with array
 public BinaryNode Build_BST(int[] input, int start, int end)
 {
 
@@ -21,6 +21,34 @@ public BinaryNode Build_BST(int[] input, int start, int end)
   node.left = Build_BST(input, start, mid -1);
   node.right = Build_BST(input, mid + 1, end);
   return node;
+}
+ //Build BST with list and use first item
+public BinaryNode Build_BST(final List<Integer> input)
+{
+	
+	if (input.size() == 0) { 
+	      return null; 
+	}
+	//final int mid = (start + end) / 2;
+	final BinaryNode node = new BinaryNode();
+
+	node.val = input.get(0);
+	List<Integer> biggerList = new ArrayList<>();
+	List<Integer> lowerList = new ArrayList<>();
+	for(int i = 1; i < input.size(); i++)
+	{
+	    if(input.get(i) > node.val)
+	    {
+				biggerList.add(input.get(i));
+	    }               
+	    else
+	    {
+				lowerList.add(input.get(i));
+	    } 
+	}
+	node.left = Build_BST(lowerList);
+	node.right = Build_BST(biggerList);
+	return node;
 }
 //Main function
 public int main(int[] input)
