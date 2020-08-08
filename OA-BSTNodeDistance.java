@@ -41,24 +41,29 @@ public int TwoDistanceBST(BinaryNode node, int a, int b)
   int findMin = 0;
 
   //LCA
-  if(node.val < a && node.val < b)
+  //Consider if a or b not int the tree node
+  if(node.val < a && node.val < b && node.right != null)
   {
-    TwoDistanceBST(node.left, a, b);
+    return TwoDistanceBST(node.right, a, b);
   }
-  else if(node.val > a && node.val > b)
+  else if(node.val > a && node.val > b && node.left != null)
   {
-    TwoDistanceBST(node.right, a, b);
+    return TwoDistanceBST(node.left, a, b);
   }
   else
   {
     findMax = dfs(node, a, 0);
     findMin = dfs(node, b, 0);
-  }	
+  }
+  //if a or b one is null return -1;
+  if(findMax == -1 || findMin == -1)
+	  return -1;
+	
   return findMax + findMin;
 }
 public int dfs(BinaryNode node, int target, int step)
 {
-  if(node.val == step)
+  if(node.val == target)
     return step;
 
   if(node.right != null && node.val < target)
@@ -66,7 +71,7 @@ public int dfs(BinaryNode node, int target, int step)
   else if (node.left != null && node.val > target)
     return dfs(node.left, target ,step + 1);
 
-  return step;
+  return -1;
 }
 //Test case
 public static void main(String[] args) {
