@@ -76,7 +76,6 @@ class Solution {
                         uf.Union(index + 0, index + 3);
                         break;           
                 }
-                int[] a = uf.Parents;
                 if(x < len)
                 {
                     //(index + 4) next column graph
@@ -87,7 +86,6 @@ class Solution {
                     //(index + 4 * grid.length) next row graph
                     uf.Union(index + 2, index + 4 * grid.length + 0);
                 }
-                int[] b = uf.Parents;
                 index += 4;
             }
        
@@ -98,7 +96,6 @@ class Solution {
         {
             set.add(num);
         }
-        int[] c = uf.Parents;
         return set.size();
     }
     
