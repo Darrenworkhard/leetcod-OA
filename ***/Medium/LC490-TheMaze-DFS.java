@@ -23,7 +23,7 @@ class Solution {
             int x = dir[1];
             int y = dir[0];
             int newx = newCur[1];
-            //move hirazion
+            //move horizon
             if(y == 0)
             {
                 //Untill touch to will
