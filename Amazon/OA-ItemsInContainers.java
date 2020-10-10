@@ -18,11 +18,11 @@ public List<Integer> numberOfItems(String s, List<Integer> startIndices, List<In
     List<Integer> ans = new ArrayList<>();
     for(int i = 0; i < startIndices.length; i++)
     {
-        if(treeMap.floorEntry(endIndices.get(i)-1) == null || treeMap.CilingEntry(startIndices.get(i)-1))
+        if(treeMap.floorEntry(endIndices.get(i)-1) == null || treeMap.ceilingEntry(startIndices.get(i)-1))
             ans.add(0);
         else
         {
-            ans.add(treeMap.getFloor(endIndices.get(i)-1) - treeMap.getCiling(startIndices.get(i)-1));
+            ans.add(treeMap.floorEntry(endIndices.get(i)-1) - treeMap.ceilingEntry(startIndices.get(i)-1));
         }
     }
     return ans;
