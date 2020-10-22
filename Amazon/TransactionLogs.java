@@ -1,11 +1,19 @@
 import java.util.*;
 import java.io.*;
 import java.lang.*;
+import java.util.Collections;
 
 public class TransactionLogs {
 
     public static void main(String[] args) {
         String[] from = new String[] {"88 99 200", "88 99 300", "99 32 100", "12 12 15"};
+        int[] scores = new int[] {1,2,3,4,5};
+         
+        PriorityQueue<Integer> q = new PriorityQueue(scores);
+        for(int i = 0; i < nums.length; i++)
+        {
+            q.add(scores[i]);
+        }
         String[] ans = processLogFile(from, 2);
         System.out.print("Hello");
     }
