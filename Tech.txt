@@ -1,0 +1,6 @@
+Demand paging
+Explain operator overloading
+What are the causes for a deadlock
+Explain race condition
+http/https, ssl/tls?
+What is database pooling?
