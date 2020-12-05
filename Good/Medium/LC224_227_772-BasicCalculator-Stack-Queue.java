@@ -1,3 +1,70 @@
+//One for all solution
+class Solution {
+    public int calculate(String s) {
+        if(s.length() == 0)
+            return 0;
+        char sign = '+';
+        Stack<Integer> stack = new Stack<>();
+        char[] cA = s.toCharArray();
+        int cur = 0;
+        for(int i = 0; i < s.length(); i++)
+        {
+            if(Character.isDigit(cA[i]))
+            {
+                cur = cur * 10 + (cA[i] - '0');
+            }
+            char c = cA[i];
+            if(c == '(')
+            {
+                int count = 1;
+                int start = i+1;
+                int end = i+1;
+                while(count != 0)
+                {
+                    if(cA[end] == '(')
+                        count++;
+                    else if(cA[end] == ')')
+                        count--;
+                    
+                    end++;
+                }
+                //recursion
+                cur = calculate(s.substring(start, end-1));
+                i = end-1;
+            }
+            if(c == '+' || c == '-' || c == '/' || c == '*' ||i == s.length()-1)
+            {
+                if(sign == '-')
+                {
+                    stack.add(cur*-1);
+                }
+                else if(sign == '+')
+                {
+                    stack.add(cur);
+                }
+                else if(sign == '/')
+                {
+                    stack.add(stack.pop() / cur);
+                }
+                else if(sign == '*')
+                {
+                    stack.add(stack.pop() * cur);
+                }
+                cur = 0;
+                sign = c;     
+            }
+            
+        }
+        int ret = 0;
+        while(!stack.isEmpty())
+        {
+            ret += stack.pop();
+        }
+        return ret;
+    }
+}
+
+
 //S1 9m O(n)
 class Solution {
     public int calculate(String s) {
