@@ -1,5 +1,7 @@
 //https://aonecode.com/aplusplus/interviewctrl/getInterview/87987122
-
+//For loop is O(N)
+//TreeMap each add/get is O(logN) - Red-black tree
+//Total time complexity is O(N) + O(longN) = O(N)
 public List<Integer> numberOfItems(String s, List<Integer> startIndices, List<Integer> endIndices) {
 
     TreeMap<Integer, Integer> treeMap = new TreeMap<>();

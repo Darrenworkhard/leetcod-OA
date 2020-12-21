@@ -79,6 +79,7 @@ class Solution {
                 if(x < len)
                 {
                     //(index + 4) next column graph
+                    //merge to next graph
                     uf.Union(index + 1, (index + 4) + 3);
                 }
                 if(y < len)
