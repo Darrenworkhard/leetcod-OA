@@ -1,5 +1,6 @@
 import java.util.*;
-
+//Time complexity O(N) 
+//Space complexity O(1) 
 public class CutoffRanks {
 
     public static void main(String[] args) {

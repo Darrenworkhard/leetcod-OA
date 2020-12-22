@@ -2,7 +2,8 @@ import java.util.*;
 import java.io.*;
 import java.lang.*;
 import java.util.Collections;
-
+//Time O(n)
+//Space O(n)
 public class TransactionLogs {
 
     public static void main(String[] args) {
@@ -35,8 +36,7 @@ public class TransactionLogs {
             }   
         }
         PriorityQueue<String> q = new PriorityQueue<>((x,y) -> {
-            int z = x.compareTo(y);
-            return z;
+            return x.compareTo(y);
             });
         for(String s : map.keySet())
         {

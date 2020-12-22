@@ -1,10 +1,71 @@
 import java.util.*;
+//https://www.youtube.com/watch?v=7Xw4XVRF1es&t=2s
 //Solution1
-public class Solution {
+//PriorityQueue O(log(N))
+//Time O()
+//Space O(N)
+public class FiveStarSellers {
+	static int total = 0;
+			static boolean findans = false;
+			public static void main(String[] args) {
+			   int[][] from = {{35, 35},{3, 2},{3, 6},{35, 335},{3, 22},{3, 36},{35, 235},{0, 2},{6, 6},{35, 35},{3, 2},{3, 6},{35, 335},{3, 22},{3, 36},{35, 235},{0, 2},{6, 6}};
+			   int ans = fiveStarReviews(from,99);
+		   }
+   
+		   public static int fiveStarReviews(List<List<Integer>> productRatings, int ratingsThreshold) 
+		   {
+			   int count = 0;
+
+			   PriorityQueue<List<Integer>> pq = new PriorityQueue((l1, l2) -> diff(l2) - diff(l1));
+
+			   for(List<Integer> rating : productRatings)
+			   {
+				   pq.add(rating);
+			   }
+
+			   double current = 0;
+			   for(List<Integer> rating : productRatings)
+			   {
+					current += (double)rating.get(0) / (double)rating.get(1);
+			   }
+			   current = current / productRatings.size() * 100;
+
+			   while(current < ratingsThreshold)
+			   {
+
+					count++;
+
+					List<Integer> topRating = pq.poll();
+
+					List<Integer> newRating = Arrays.asList(topRating.get(0) + 1, topRating.get(1) + 1);
+
+					current += (newRating.get(0) / newRating.get(1)) - (topRating.get(0) / topRating.get(1));
+
+					pq.add(newRating);
+			   }
+
+			   return count;
+		
+		   }
+		   public int diff(List<Integer> list)
+		   {
+			   double crrentRating = 100.0 * (list.get(0) / list.get(1));
+			   double newRating = 100.0 * (list.get(0)+1 / list.get(1)+1);
+
+			   return (int)(newRating - crrentRating);
+		   }
+		   
+   
+}
+//Solution2
+public class FiveStarSellers_1 {
  static int total = 0;
-	 	static boolean findans = false;
-	    //PriorityQueue<int[]> pQ = new PriorityQueue<>((x,y) -> x[0] / x[1] == y[0] / y[1] ? x[1] < y[1] ? -1 : 1 : x[0] / x[1] - y[0] / y[1]);
-	    //HashMap<>
+		 static boolean findans = false;
+		 public static void main(String[] args) {
+			int[][] from = {{35, 35},{3, 2},{3, 6},{35, 335},{3, 22},{3, 36},{35, 235},{0, 2},{6, 6},{35, 35},{3, 2},{3, 6},{35, 335},{3, 22},{3, 36},{35, 235},{0, 2},{6, 6}};
+			int ans = fiveStarReviews(from,99);
+		}
+
 	    public static int fiveStarReviews(int[][] productRatings, int ratingsThreshold) {
 	        double curent = 0;
 	        for(int[] i : productRatings)
@@ -17,7 +78,7 @@ public class Solution {
 	        dfs(productRatings, ratingsThreshold, curent);
 	        return total;
 	    }
-	    static void dfs(int[][] productRatings, int ratingsThreshold, double current)
+		static void dfs(int[][] productRatings, int ratingsThreshold, double current)
 	    {
 	        if(ratingsThreshold <= current)
 	        {
@@ -50,5 +111,6 @@ public class Solution {
 	        
 	        return;
 	            
-	    }
-}
+		}
+	}
+

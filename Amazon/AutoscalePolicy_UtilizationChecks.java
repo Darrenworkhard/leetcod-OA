@@ -1,6 +1,7 @@
 
 //https://docs.google.com/document/d/1zzVrn4VYPDsn2klG4IeZOJo3yYW8VfU9BVNN0Nr_nO0/edit?usp=sharing
-//Time O(N) 
+//Time O(N)
+//Space O(1)
 import java.util.*;
 import java.io.*;
 import java.lang.*;
