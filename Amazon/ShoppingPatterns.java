@@ -1,4 +1,4 @@
-https://aonecode.com/amazon-online-assessment-shopping-patterns
+//https://aonecode.com/amazon-online-assessment-shopping-patterns
 
 import java.util.*;
 

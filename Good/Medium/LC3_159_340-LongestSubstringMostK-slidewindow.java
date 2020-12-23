@@ -24,7 +24,8 @@ class Solution {
         return max;
     }
 }
-//159
+//one sol for all
+//340
 class Solution {
     public int lengthOfLongestSubstringKDistinct(String s, int k) {
         if(s.length() * k == 0) return 0;
@@ -47,7 +48,9 @@ class Solution {
         return max;
     }
 }
-//340
+
+//one sol for all
+//159
 class Solution {
     public int lengthOfLongestSubstringTwoDistinct(String s) {
         if(s.length() == 0) return 0;

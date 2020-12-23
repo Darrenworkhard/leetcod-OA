@@ -3,7 +3,8 @@ import java.util.*;
 public class SubstringsofsizeK{
     public static void main(String[] args) {
         List<String> ans = new ArrayList<>();
-        ans = SubstringOfSize("awaglknagawunagwkwagl", 4);
+        //ans = SubstringOfSize("awaglknagawunagwkwagl", 4);
+        ans = SubstringOfSize("awaglk", 4);
 
     }
     public static List<String> SubstringOfSize(String s, int k)
