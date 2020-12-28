@@ -127,8 +127,8 @@ public class FiveStarSellers {
 			   return count;
 		
 		   }
-		   public static int diff(List<Double> list)
-		   {
+		   //public static int diff(List<Double> list)
+		   //{
 			    // double crrentRating = 100.0 * list.get(0) / list.get(1);
 			    // double newRating = 100.0 * (list.get(0)+1) / (list.get(1)+1);
 
@@ -139,7 +139,7 @@ public class FiveStarSellers {
 				// }
 				// return 0;
 			   //return (int)(newRating - crrentRating);
-		   }
+		   //s}
 		   
    
 }
