@@ -36,6 +36,7 @@ class Solution {
         while (r < s.length())
         {
             map.put(cA[r], r++);
+            //(change k to 2 will the same to 159)
             if(map.size() >= k+1)
             {
                 int minIndex = Collections.min(map.values());
