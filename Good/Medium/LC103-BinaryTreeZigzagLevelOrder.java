@@ -19,7 +19,7 @@ class Solution {
         List<List<Integer>> ret = new ArrayList<>();
         if(root == null) return ret;
         
-        Queue<TreeNode> q = new LinkedList<>();
+        Queue<TreeNode> q = new LinkedList<>(); 
         q.add(root);
         boolean even = true;
         while(!q.isEmpty())
