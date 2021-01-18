@@ -82,7 +82,33 @@ class Solution {
             s.add(uf.Parents[i]);
         }
         return s.size();
+    } 
+
+    //DFS
+    public int findCircleNum2(int[][] M) {
+        boolean[] visited = new boolean[M.length + 1];
+        int circle = 0;
+        for(int i = 0; i < M.length; i++)
+        {
+            if(!visited[i])
+            {
+                dfs(M, i, visited);
+                circle++;
+            }
+        }
+        return circle;
+    }
+    void dfs(int[][] M, int node, boolean[] visited)
+    {
+        int[] friends = M[node];
+        visited[node] = true;
+        for(int i = 0; i < friends.length; i++)
+        {
+            if(friends[i] == 1 && !visited[i])
+                dfs(M, i, visited);
+        }
+        
     }
     
-
 } 
+

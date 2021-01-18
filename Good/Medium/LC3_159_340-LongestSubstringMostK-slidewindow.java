@@ -24,7 +24,8 @@ class Solution {
         return max;
     }
 }
-//159
+//one sol for all
+//340
 class Solution {
     public int lengthOfLongestSubstringKDistinct(String s, int k) {
         if(s.length() * k == 0) return 0;
@@ -35,6 +36,7 @@ class Solution {
         while (r < s.length())
         {
             map.put(cA[r], r++);
+            //(change k to 2 will the same to 159)
             if(map.size() >= k+1)
             {
                 int minIndex = Collections.min(map.values());
@@ -47,7 +49,9 @@ class Solution {
         return max;
     }
 }
-//340
+
+//one sol for all
+//159
 class Solution {
     public int lengthOfLongestSubstringTwoDistinct(String s) {
         if(s.length() == 0) return 0;
