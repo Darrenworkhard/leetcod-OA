@@ -1,6 +1,9 @@
-https://aonecode.com/amazon-online-assessment-shopping-patterns
+//https://aonecode.com/amazon-online-assessment-shopping-patterns
+
+//https://www.youtube.com/watch?v=EdJhwAhVFXY&ab_channel=%E4%B8%83%E4%BA%BA%E5%B0%8F%E7%B5%84-%E8%AB%8B%E6%8F%90%E9%80%9F%E8%A7%80%E7%9C%8B%21%21
 
 import java.util.*;
+//T O(N3)
 
 public class ShoppingPatterns {
     static int min = Integer.MAX_VALUE;
@@ -57,6 +60,8 @@ public class ShoppingPatterns {
 
         }
         Set<Integer> val = graph.get(current);
+        //所有節點對外連接的點
+        //graph.get(i).contains(start) 有點多於?
         for(int i : val)
         {
             if(!set.contains(i) && graph.get(i).contains(start))
