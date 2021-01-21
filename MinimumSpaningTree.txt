@@ -1,0 +1,8 @@
+Graph representation
+1.Adjacency matrix
+2.Adjacency list
+3.Edge list
+
+Algorithms to compute MST
+1.Prim
+2.Kruskal

@@ -9,6 +9,7 @@ class Solution {
             if(max < curMax)
             {
                 max = curMax;
+                //Key point abba -> b, aba -> b
                 startIndex = i - (curMax - 1) / 2;
             }     
         }
@@ -22,6 +23,7 @@ class Solution {
             l--;
             r++;
         }
+         //Key point
         return r - l - 1;
     }
 }

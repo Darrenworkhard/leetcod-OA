@@ -1,4 +1,4 @@
-//DP
+//DP O(n*2^n)
 class Solution {
     List<List<String>> ret = new ArrayList<>();
     public List<List<String>> partition(String s) {
@@ -18,6 +18,7 @@ class Solution {
         char[] cA = s.toCharArray();
         for(int end = str; end < len; end++)
         {
+            //Key point end - str <= 1, ex: aba, abba
             if(cA[str] == cA[end] && (end - str <= 1 || dp[str+1][end-1]))
             {
                 dp[str][end] = true;
@@ -28,7 +29,7 @@ class Solution {
         }
     }
 }
-//Backtracking
+//Backtracking O(n*2^n)
 class Solution {
     List<List<String>> list = new ArrayList<>();
     public List<List<String>> partition(String s) {
@@ -40,6 +41,7 @@ class Solution {
         if(start >= s.length()) list.add(new ArrayList<>(curL));
         for(int end = start; end < s.length(); end++){
             if(isPalindrome(s, start, end)){
+                //O(N)
                 curL.add(s.substring(start, end + 1));
                 dfs(s, end + 1, curL);
                 curL.remove(curL.size() - 1);
@@ -47,6 +49,7 @@ class Solution {
         }
     }
     
+    //(O(N))
     private boolean isPalindrome(String s, int l, int r){
         while(l <= r){
             if(s.charAt(l) != s.charAt(r)) return false;
