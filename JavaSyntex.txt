@@ -1,0 +1,14 @@
+//1
+List<Integer> r = new ArrayList<>(List.of(1,2,3));
+Arrays.asList(nums[i], nums[j], complement);
+//2
+map.putIfAbsent(nums[i]+nums[j], new ArrayList<>());
+map.get(nums[i]+nums[j]).add(new ArrayList<Integer>(List.of(nums[i], nums[j])));
+//3
+mat[y][x] = map.get(y-x).remove();
+//4
+**重複會照樣新增
+ HashSet<int[]> zeroSet = new HashSet<>();
+**重複部新增
+HashSet<List<Integer>> zeroSet = new HashSet<>();
+//5
