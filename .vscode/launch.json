@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - AutoscalePolicy_UtilizationChecks",
+            "request": "launch",
+            "mainClass": "AutoscalePolicy_UtilizationChecks",
+            "projectName": "leetcod-OA_e54d34ea"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Test",
+            "request": "launch",
+            "mainClass": "Test",
+            "projectName": "leetcod-OA_e54d34ea"
+        },
+        {
+            "type": "java",
             "name": "Debug (Launch) - Current File",
             "request": "launch",
             "mainClass": "${file}"

@@ -9,6 +9,15 @@ import java.lang.*;
 public class AutoscalePolicy_UtilizationChecks {
     public static void main(String[] args)
     {
+        Set<String> s= new HashSet<>();
+        s.add("a");
+        Iterator<String> a = s.iterator();
+        while(a.hasNext())
+        {
+            String i = a.next();
+            String x= i;
+
+        }
         List<Integer> util = new ArrayList<>();
         util.add(5);
         util.add(10);
