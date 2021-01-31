@@ -2,39 +2,42 @@
 //For loop is O(N)
 //TreeMap each add/get is O(logN) - Red-black tree
 //Total time complexity is O(N) + O(longN) = O(N)
-public List<Integer> numberOfItems(String s, List<Integer> startIndices, List<Integer> endIndices) {
 
-    TreeMap<Integer, Integer> treeMap = new TreeMap<>();
-    int count = 0;
-    for(int i = 0; i < s.length; i++)
-    {
-        if(s.charAt(i) == '|')
+import java.util.*;
+import java.util.TreeMap;
+
+public class Itemincontainers{
+    public List<Integer> numberOfItems(String s, List<Integer> startIndices, List<Integer> endIndices) {
+
+        TreeMap<Integer, Integer> treeMap = new TreeMap<>();
+        int count = 0;
+        for(int i = 0; i < s.length(); i++)
         {
-            treeMap.put(i, count);
+            if(s.charAt(i) == '|')
+            {
+                treeMap.put(i, count);
+            }
+            else
+            {
+                count++;
+            }
         }
-        else
+        List<Integer> ans = new ArrayList<>();
+        for(int i = 0; i < startIndices.length; i++)
         {
-            count++;
+            if(treeMap.floorEntry(endIndices.get(i)-1) == null || treeMap.ceilingEntry(startIndices.get(i)-1))
+                ans.add(0);
+            else
+            {
+                ans.add(treeMap.floorEntry(endIndices.get(i)-1) - treeMap.ceilingEntry(startIndices.get(i)-1));
+            }
         }
+        return ans;
+        
     }
-    List<Integer> ans = new ArrayList<>();
-    for(int i = 0; i < startIndices.length; i++)
-    {
-        if(treeMap.floorEntry(endIndices.get(i)-1) == null || treeMap.ceilingEntry(startIndices.get(i)-1))
-            ans.add(0);
-        else
-        {
-            ans.add(treeMap.floorEntry(endIndices.get(i)-1) - treeMap.ceilingEntry(startIndices.get(i)-1));
-        }
-    }
-    return ans;
-    
+
 }
 
-
-import java.util.Arrays;
-import java.util.TreeMap;
- 
 public class ItemsInContainers {
     // Items in Containers
     // Amazon would like to know how much inventory exists in their closed inventory compartments. Given a string s consisting of items as and closed compartments as an open and close i', an array of starting indices startIndices, and an array of ending indices endIndices, determine the number of items in closed compartments within the substring between the two indices, inclusive.
