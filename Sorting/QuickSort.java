@@ -1,5 +1,5 @@
 package Sorting;
-
+//Worst O(N^2), Best: O(NlogN)
 public class QuickSort {
     public static int[] quickSort(int[] array) {
         // Write your code here.

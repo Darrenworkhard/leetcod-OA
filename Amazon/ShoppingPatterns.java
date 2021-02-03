@@ -1,13 +1,6 @@
 //https://aonecode.com/amazon-online-assessment-shopping-patterns
-<<<<<<< HEAD
-
 //https://www.youtube.com/watch?v=EdJhwAhVFXY&ab_channel=%E4%B8%83%E4%BA%BA%E5%B0%8F%E7%B5%84-%E8%AB%8B%E6%8F%90%E9%80%9F%E8%A7%80%E7%9C%8B%21%21
-=======
->>>>>>> 7e570a8f2d647da88ce115816e7e1a4f88a526a6
-
-import java.util.*;
 //T O(N3)
-
 public class ShoppingPatterns {
     static int min = Integer.MAX_VALUE;
 

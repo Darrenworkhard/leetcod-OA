@@ -5,7 +5,7 @@ package Sorting;
 import java.util.*;
 
 class Program {
-  public static int[] BoobleSort(int[] array) {
+  public static int[] boobleSort(int[] array) {
    	for(int i = 0; i < array.length; i++)
 		{
 			for(int j = 0; j < array.length -1; j++)
