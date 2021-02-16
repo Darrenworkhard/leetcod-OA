@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch BinarySearch",
+            "request": "launch",
+            "mainClass": "BinarySearch",
+            "projectName": "leetcod-OA_88d3bab3"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - AutoscalePolicy_UtilizationChecks",
             "request": "launch",
             "mainClass": "AutoscalePolicy_UtilizationChecks",

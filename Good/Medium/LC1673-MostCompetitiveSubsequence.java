@@ -5,7 +5,7 @@ class Solution {
         Stack<Integer> stack = new Stack<>();
         for(int i = 0; i < nums.length; i++)
         {
-            //
+            //point stack.size() + nums.length - i > k (size in window)
             while(!stack.isEmpty() && nums[i] < stack.peek() && stack.size() + nums.length - i > k)
             {
                 stack.pop();

@@ -3,3 +3,6 @@ Explain operator overloading
 What are the causes for a deadlock
 Explain race condition
 What is database pooling?
+
+
+Search file ( CTRL + P ) This is simple, if you know the name of the file, there is no longer a need to go into the file explorer and select.

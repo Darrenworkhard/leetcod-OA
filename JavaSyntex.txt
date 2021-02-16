@@ -1,5 +1,8 @@
 //1
 List<Integer> r = new ArrayList<>(List.of(1,2,3));
+
+Integer[] spam = new Integer[] { 1, 2, 3 };
+List<Integer> list = Arrays.asList(spam);
 Arrays.asList(nums[i], nums[j], complement);
 //2
 map.putIfAbsent(nums[i]+nums[j], new ArrayList<>());
