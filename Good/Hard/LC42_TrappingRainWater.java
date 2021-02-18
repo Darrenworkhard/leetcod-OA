@@ -1,5 +1,9 @@
+package Good.Hard;
+
+import java.util.*;
+
 //DP O(n)
-class Solution {
+class LC42_TrappingRainWater {
     public int trap(int[] height) {
         if(height.length == 0) return 0;
         int[] dpleft = new int[height.length];
@@ -21,11 +25,31 @@ class Solution {
         }
         return ans;
     }
-}
 
-//Brout force O(n^2)
-class Solution {
-    public int trap(int[] height) {
+    //Stack
+    public int trap_S2(int[] height) {
+        int ans = 0;
+        Deque<Integer> dq = new LinkedList<>();
+        for(int i = 0; i < height.length; i++)
+        {
+            //use while not if ex : 1,0,0,2
+            while(!dq.isEmpty() && height[i] > height[dq.peekFirst()])
+            {
+                int gap = dq.pollFirst();
+                if(dq.isEmpty())
+                    continue;
+                int distance = i - dq.peekFirst() - 1;
+                int minContainer = Math.min(height[i], height[dq.peekFirst()]) - height[gap];
+                ans += minContainer * distance;
+            }
+            dq.addFirst(i);
+        }
+        
+        return ans;
+    }
+
+    //Brout force O(n^2)
+    public int trap_S3(int[] height) {
         int ans = 0;
         for(int i = 0; i < height.length; i++)
         {
