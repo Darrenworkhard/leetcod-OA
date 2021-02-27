@@ -31,6 +31,7 @@ class Solution {
     }
 }
 //81
+//we get O(N)O(N) worst case (with duplicates) vs O(\log N)O(logN) best case complexity (without duplicates).
 class Solution {
     public boolean search(int[] nums, int target) {
         if(nums.length == 0) return false;
