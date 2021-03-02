@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch CommandPattern",
+            "request": "launch",
+            "mainClass": "SystemDesign.CommandPattern.CommandPattern",
+            "projectName": "leetcod-OA_88d3bab3"
+        },
+        {
+            "type": "java",
+            "name": "Launch Singleton",
+            "request": "launch",
+            "mainClass": "SystemDesign.Singleton.Singleton",
+            "projectName": "leetcod-OA_88d3bab3"
+        },
+        {
+            "type": "java",
             "name": "Launch Test",
             "request": "launch",
             "mainClass": "Test",

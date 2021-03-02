@@ -1,7 +1,10 @@
-package AlgorithmReview;
+//package AlgorithmReview;
+
+import java.util.*;
 
 class Trie {
 
+    
     class Node
     {
         boolean endOfWord;
@@ -31,8 +34,21 @@ class Trie {
     }
     
     /** Returns if the word is in the trie. */
-    public boolean search(String word) {
-        return search(word, node);
+    //public boolean search(String word) {
+    public boolean search() {
+
+        Queue<Node> q = new LinkedList<>();
+        q.add(node);
+        while(!q.isEmpty())
+        {
+            int size = q.size();
+            for(int i = 0; i < size; i++)
+            {
+                Node n = q.poll();
+                
+            }
+        }
+        //return search(word, node);
     }
     boolean search(String word, Node current)
     {
