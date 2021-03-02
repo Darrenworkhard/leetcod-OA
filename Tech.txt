@@ -5,4 +5,7 @@ Explain race condition
 What is database pooling?
 
 
-Search file ( CTRL + P ) This is simple, if you know the name of the file, there is no longer a need to go into the file explorer and select.
+Search file ( CTRL + P ) This is simple,
+if you know the name of the file, there is no longer a need to go into the file explorer and select.
+
+**Is strategy is the same with dependent injection?
