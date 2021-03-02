@@ -20,6 +20,13 @@
         },
         {
             "type": "java",
+            "name": "Launch Strategy",
+            "request": "launch",
+            "mainClass": "SystemDesign.Strategy.Strategy",
+            "projectName": "leetcod-OA_86bf7173"
+        },
+        {
+            "type": "java",
             "name": "Launch Test",
             "request": "launch",
             "mainClass": "Test",
