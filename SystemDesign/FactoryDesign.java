@@ -16,7 +16,7 @@ public class FactoryDesign{
     public List<Integer> getVacantTable(){
       List<Integer>  vacant = new ArrayList<>();
       for(int i = 0;i < _totalTable.length;i++){
-        if(!t)
+        if(!t) 
           vacant.add(i);
       }
       return vacant;
