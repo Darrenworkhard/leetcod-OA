@@ -6,6 +6,10 @@ public class CurrentCondition implements ObserverData, Display{
     private float _temp;
     private float _humidity;
     private Subject _weatherData;
+    public CurrentCondition()
+    {
+
+    }
     public CurrentCondition(Subject weatherData, String name)
     {
         _weatherData = weatherData;

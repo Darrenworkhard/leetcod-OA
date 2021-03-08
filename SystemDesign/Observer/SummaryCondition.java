@@ -4,6 +4,11 @@ public class SummaryCondition implements ObserverData, Display{
     private float _temp;
     private float _humidity;
     private Subject _weatherData;
+    public SummaryCondition()
+    {
+
+    }
+
     public SummaryCondition(Subject weatherData, String name)
     {
         _weatherData = weatherData;
