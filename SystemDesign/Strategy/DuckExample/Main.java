@@ -1,6 +1,6 @@
 package SystemDesign.Strategy;
 
-public class Strategy{
+public class Main{
 
     public static void main(String[] arg)
     {

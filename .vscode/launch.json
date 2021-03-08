@@ -8,6 +8,20 @@
             "type": "java",
             "name": "Launch Main",
             "request": "launch",
+            "mainClass": "SystemDesign.Decorator.Main",
+            "projectName": "leetcod-OA_86bf7173"
+        },
+        {
+            "type": "java",
+            "name": "Launch Main",
+            "request": "launch",
+            "mainClass": "SystemDesign.Strategy.FoodExample.Main",
+            "projectName": "leetcod-OA_86bf7173"
+        },
+        {
+            "type": "java",
+            "name": "Launch Main",
+            "request": "launch",
             "mainClass": "SystemDesign.Factory.Main",
             "projectName": "leetcod-OA_88d3bab3"
         },
