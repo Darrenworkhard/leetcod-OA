@@ -1,5 +1,6 @@
+import java.util.*;
 //DP O(n*2^n)
-class Solution {
+class LC131_PalidromePartitioning_Backtracking {
     List<List<String>> ret = new ArrayList<>();
     public List<List<String>> partition(String s) {
         int len = s.length();
@@ -30,7 +31,7 @@ class Solution {
     }
 }
 //Backtracking O(n*2^n)
-class Solution {
+class LC131_PalidromePartitioning_BacktrackingS2 {
     List<List<String>> list = new ArrayList<>();
     public List<List<String>> partition(String s) {
         dfs(s, 0, new ArrayList<>());
